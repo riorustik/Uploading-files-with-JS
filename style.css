@@ -78,6 +78,11 @@ input[type=file] {
     &:hover .preview-info {
         bottom: 1px;
     }
+
+    &.removing{
+        transform: scale(0);
+        transition: transform .3s;
+    }
 }
 
 .preview-remove {
@@ -110,3 +115,4 @@ input[type=file] {
     padding: 0 5px;
     transition: bottom 0.2s;
 }
+
