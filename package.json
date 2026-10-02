@@ -1,5 +1,5 @@
 {
-  "name": "sol_8_uploading-files-wit-js",
+  "name": "sol_8_uploading-files-with-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/riorustik/Uploading-files-wit-JS.git"
+    "url": "git+https://github.com/riorustik/Uploading-files-with-JS.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/riorustik/Uploading-files-wit-JS/issues"
+    "url": "https://github.com/riorustik/Uploading-files-with-JS/issues"
   },
-  "homepage": "https://github.com/riorustik/Uploading-files-wit-JS#readme",
+  "homepage": "https://github.com/riorustik/Uploading-files-with-JS#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
