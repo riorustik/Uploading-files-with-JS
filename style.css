@@ -12,7 +12,7 @@ body {
 }
 
 
-.card{
+.card {
     border-radius: 6px;
     background: #fff;
     padding: 1rem;
@@ -49,23 +49,64 @@ body {
     color: #fff;
 }
 
-input[type=file]{
+input[type=file] {
     display: none;
 }
 
-.preview{
+.preview {
     display: flex;
     flex-wrap: wrap;
     padding: .5rem;
 }
 
-.preview-image{
+.preview-image {
+    position: relative;
     margin-bottom: .5rem;
     margin-right: .5rem;
+    overflow: hidden;
 
-    img{
+    img {
         width: 180px;
         height: 100%;
         object-fit: cover;
     }
+
+    &:hover .preview-remove{
+        opacity: 1;
+    }
+
+    &:hover .preview-info {
+        bottom: 1px;
+    }
+}
+
+.preview-remove {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.preview-info {
+    position: absolute;
+    height: 25px;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: bottom 0.2s;
 }
