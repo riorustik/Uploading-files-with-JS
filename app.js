@@ -1,1 +1,3 @@
-import './upload.js'
+import {upload} from "./upload.js";
+
+upload('#file')

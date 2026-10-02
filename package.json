@@ -20,5 +20,8 @@
   "homepage": "https://github.com/riorustik/Uploading-files-wit-JS#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "upload.js": "^0.0.11"
   }
 }
