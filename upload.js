@@ -5,6 +5,15 @@ function bytesToSize(bytes) {
     return Math.round(bytes / Math.pow(1024, i)) + ' ' + sizes[i]
 }
 
+const element = (tag, classes = [], content) => {
+    const node = document.createElement(tag);
+
+    if(classes.length) node.classList.add(...classes)
+    if(content) node.textContent = content
+
+    return node;
+}
+
 export function upload(selector, options = {}) {
     let files = [];
     const input = document.querySelector(selector);
@@ -16,12 +25,8 @@ export function upload(selector, options = {}) {
         input.setAttribute('accept', options.accept.join(','));
     }
 
-    const preview = document.createElement('div');
-    preview.classList.add('preview');
-
-    const open = document.createElement('button');
-    open.classList.add('btn');
-    open.textContent = 'open';
+    const preview = element('div', ['preview']);
+    const open = element('button', ['btn'], 'open');
 
     input.insertAdjacentElement('afterend', preview);
     input.insertAdjacentElement('afterend', open);
@@ -53,6 +58,7 @@ export function upload(selector, options = {}) {
             reader.readAsDataURL(file)
         })
     }
+
     const removeHandler = e => {
         if (!e.target.dataset.name) return
 
@@ -68,7 +74,8 @@ export function upload(selector, options = {}) {
         setTimeout(() => block.remove(), 300)
     }
 
+
     open.addEventListener('click', triggerInput);
     input.addEventListener('change', changeHandler);
-    preview.addEventListener('click', removeHandler)
+    preview.addEventListener('click', removeHandler);
 }
