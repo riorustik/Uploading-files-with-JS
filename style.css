@@ -71,15 +71,15 @@ input[type=file] {
         object-fit: cover;
     }
 
-    &:hover .preview-remove{
+    &:hover .preview-remove {
         opacity: 1;
     }
 
     &:hover .preview-info {
-        bottom: 1px;
+        bottom: 0;
     }
 
-    &.removing{
+    &.removing {
         transform: scale(0);
         transition: transform .3s;
     }
@@ -116,3 +116,24 @@ input[type=file] {
     transition: bottom 0.2s;
 }
 
+.preview-info-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #42b983;
+    text-align: center;
+    transition: transform 0.2s;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fdfcf4;
+    text-transform: uppercase;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+    &:active {
+        color: #07100e;
+    }
+}
