@@ -24,16 +24,17 @@ upload('#file', {
                     const element = block.firstElementChild
 
                     element.classList.add('preview-info-progress')
-                    element.textContent = 'copy link'
-
-                    const { data } = supabase.storage
-                        .from('upload-file')
-                        .getPublicUrl(`${file.name}`)
-
-                    block.addEventListener('click', async (e) => {
-                        await navigator.clipboard.writeText(data.publicUrl)
-
-                    })
+                    element.textContent = 'successful'
+                        //'copy link'
+                    //процесс получения ссылки и отдачи её пользователю для использования. проблема в соответсвии ссылок и картинок
+                    // const { data } = supabase.storage
+                    //     .from('upload-file')
+                    //     .getPublicUrl(`${file.name}`)
+                    //
+                    // block.addEventListener('click', async (e) => {
+                    //     await navigator.clipboard.writeText(data.publicUrl)
+                    //
+                    // })
                 }
             } catch (error) {
                 console.error('Ошибка загрузки файла:', error)
